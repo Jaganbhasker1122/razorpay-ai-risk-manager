@@ -3,7 +3,6 @@
 **Razorpay Buildathon 2026 Submission**
 *An AI-powered dispute & fraud-risk intelligence platform for merchants*
 
-
 ---
 
 ## 1. 🏆 Executive Summary
@@ -19,7 +18,7 @@ Chargeback and dispute management is one of the most operationally painful parts
 
 The core innovation is bringing structured ML risk scoring and unstructured LLM evidence reasoning into a **single decision-support workflow**, so merchants aren't fighting disputes blind.
 
-![Risk Manager Dashboard](./screenshots/01_risk_manager_dashboard.png)
+![Risk Manager Dashboard](./screenshots/risk_manager_dashboard.png)
 *The main dashboard — merchant's entry point into fraud risk and dispute intelligence.*
 
 ---
@@ -33,7 +32,7 @@ Merchants dealing with payment disputes today typically face:
 - **No evidence quality feedback** — merchants submit whatever they have, with no idea if it's complete or convincing
 - **No outcome guidance** — decisions on whether to fight or concede a dispute are made on gut feel, not probability
 
-![Disputes Overview](./screenshots/02_disputes_overview.png)
+![Disputes Overview](./screenshots/disputes_overview.png)
 *The scale of the problem — a merchant's dispute portfolio, each case demanding manual attention.*
 
 This is a real, well-understood pain point in payments operations, and it scales badly — the more transaction volume a merchant has, the more this becomes an unmanageable manual process.
@@ -50,7 +49,7 @@ Razorpay AI Risk Manager was built as an integrated platform rather than a set o
 - Two **ML models** (fraud risk, win probability) built on XGBoost provide predictive signal
 - A **DeepSeek LLM integration** reads evidence and produces structured, grounded analysis — completeness gaps, contradictions, and recommendations — rather than free-form text
 
-![Demo Mode Disputes](./screenshots/03_demo_mode_disputes.png)
+![Demo Mode Disputes](./screenshots/demo_mode_disputes.png)
 *The unified platform in demo mode — risk, disputes, and evidence in one place.*
 
 The reasoning for combining ML + LLM: fraud scoring alone tells you *risk*, but not *whether your evidence can win the dispute*. Evidence analysis alone tells you about a single case, but not the underlying transaction risk pattern. Together, they give a merchant a genuinely more complete picture.
@@ -79,55 +78,55 @@ The reasoning for combining ML + LLM: fraud scoring alone tells you *risk*, but 
 **Dashboard → Dispute Portfolio → Raise / Open Dispute → Dispute Overview → Lifecycle → Evidence → ML + AI → Gateway Review → Final Outcome → Integration**
 
 ### Dashboard
-![Risk Manager Dashboard](./screenshots/01_risk_manager_dashboard.png)
+![Risk Manager Dashboard](./screenshots/risk_manager_dashboard.png)
 *Merchant's fraud-risk and dispute command center — the entry point for every workflow below.*
 
 ### Dispute Portfolio
-![Disputes Overview](./screenshots/02_disputes_overview.png)
+![Disputes Overview](./screenshots/disputes_overview.png)
 *The merchant's dispute list — all open and historical cases summarized for quick triage.*
 
-![Demo Mode Disputes](./screenshots/03_demo_mode_disputes.png)
+![Demo Mode Disputes](./screenshots/demo_mode_disputes.png)
 *Demo-mode dispute environment used to showcase the workflow end-to-end.*
 
 ### Raise / Open Dispute
-![Raise Dispute](./screenshots/04_raise_dispute.png)
+![Raise Dispute](./screenshots/raise_dispute.png)
 *The intake flow where a new dispute case is created and tied to the underlying transaction.*
 
 ### Dispute Overview
-![Dispute Overview](./screenshots/05_dispute_overview.png)
+![Dispute Overview](./screenshots/dispute_overview.png)
 *A single dispute's full detail view — status, transaction context, and case summary.*
 
 ### Dispute Lifecycle
-![Dispute Overview and Lifecycle](./screenshots/06_dispute_overview_and_lifecycle.png)
+![Dispute Overview and Lifecycle](./screenshots/dispute_overview_and_lifecycle.png)
 *How a live dispute record and its lifecycle state connect in a single view.*
 
-![Dispute Lifecycle](./screenshots/07_dispute_lifecycle.png)
+![Dispute Lifecycle](./screenshots/dispute_lifecycle.png)
 *The dispute lifecycle state machine — the stages a case moves through from creation to resolution.*
 
-![Dispute History](./screenshots/08_dispute_history.png)
+![Dispute History](./screenshots/dispute_history.png)
 *Full event history for a dispute — a timeline of every action and status change, giving the merchant an audit trail.*
 
 ### Evidence Collection & External Evidence
-![External Evidence Connectors](./screenshots/10_external_evidence_connectors.png)
+![External Evidence Connectors](./screenshots/external_evidence_connectors.png)
 *External evidence connector interface, for pulling supporting evidence from outside sources.*
 
-![External Evidence Adder](./screenshots/11_external_evidence_adder.png)
+![External Evidence Adder](./screenshots/external_evidence_adder.png)
 *The manual evidence-addition flow, where merchants attach documents to a dispute case.*
 
 ### ML + AI Analysis
-![ML and AI Analysis](./screenshots/09_ml_and_ai_analysis.png)
+![ML and AI Analysis](./screenshots/ml_and_ai_analysis.png)
 *Combined machine-learning risk score and AI evidence assessment, shown together for the first time in one interface.*
 
 ### Gateway Review
-![Gateway Review](./screenshots/12_gateway_review.png)
+![Gateway Review](./screenshots/gateway_review.png)
 *The review checkpoint where the AI/ML assessment is surfaced to the merchant before submission.*
 
 ### Final Outcome
-![Dispute Final Outcome](./screenshots/13_dispute_final_outcome.png)
+![Dispute Final Outcome](./screenshots/dispute_final_outcome.png)
 *The resolved state of a dispute case, showing the final decision.*
 
 ### Integration
-![Razorpay Webhook Integration](./screenshots/14_razorpay_webhook_integration.png)
+![Razorpay Webhook Integration](./screenshots/razorpay_webhook_integration.png)
 *The Razorpay webhook integration point, where dispute events flow into the platform.*
 
 ---
@@ -146,10 +145,10 @@ The evidence-analysis pipeline sends structured evidence context to DeepSeek wit
 ### AI + ML Interaction
 The fraud score, win-probability estimate, and DeepSeek evidence analysis converge at the **Gateway Review** step, so the merchant sees risk, odds, and evidence quality side by side rather than as three disconnected signals.
 
-![ML and AI Analysis](./screenshots/09_ml_and_ai_analysis.png)
+![ML and AI Analysis](./screenshots/ml_and_ai_analysis.png)
 *ML risk output and AI evidence analysis in the same interface — the core intelligence layer of the product.*
 
-![Gateway Review](./screenshots/12_gateway_review.png)
+![Gateway Review](./screenshots/gateway_review.png)
 *Where ML risk, win probability, and AI evidence analysis converge for the merchant's decision.*
 
 ---
@@ -164,10 +163,10 @@ Evidence handling is central to the platform's value: it's not enough to store f
 - **Manual evidence addition** — merchants can directly attach documents
 - **AI completeness & contradiction detection** — DeepSeek analysis flags what's missing or inconsistent in the evidence set
 
-![External Evidence Connectors](./screenshots/10_external_evidence_connectors.png)
+![External Evidence Connectors](./screenshots/external_evidence_connectors.png)
 *Evidence enrichment via external connectors — evidence doesn't have to originate only from manual upload.*
 
-![External Evidence Adder](./screenshots/11_external_evidence_adder.png)
+![External Evidence Adder](./screenshots/external_evidence_adder.png)
 *Manual evidence addition to a dispute case.*
 
 **Current limitation, stated plainly:** image-based evidence (e.g., scanned receipts) has no OCR library wired in yet, so text extraction currently only works reliably for PDF/text evidence. This is tracked in the roadmap below rather than glossed over, since it directly affects what evidence types the AI can actually reason about today.
@@ -183,10 +182,10 @@ The platform is explicitly designed as **human-in-the-loop**, not autonomous dec
 3. The merchant makes the final call
 4. The outcome is recorded on the dispute record
 
-![Gateway Review](./screenshots/12_gateway_review.png)
+![Gateway Review](./screenshots/gateway_review.png)
 *Merchant-facing review checkpoint before submission.*
 
-![Dispute Final Outcome](./screenshots/13_dispute_final_outcome.png)
+![Dispute Final Outcome](./screenshots/dispute_final_outcome.png)
 *The recorded final outcome of a dispute case.*
 
 This design choice matters for a fintech context: the AI supports the merchant's judgment, it doesn't replace it.
@@ -391,7 +390,7 @@ The project moved from a basic dispute tracker concept to a full ML + LLM-assist
 - A clean **FastAPI + React + SQLAlchemy** architecture with a documented 11-table schema and 50+ endpoints
 - Honest self-assessment of what still needs work before production
 
-![Dispute History](./screenshots/08_dispute_history.png)
+![Dispute History](./screenshots/dispute_history.png)
 *The full audit trail of a completed dispute — evidence of the workflow operating end-to-end.*
 
 ---
@@ -483,5 +482,5 @@ Razorpay AI Risk Manager was built to tackle a real, tedious, high-stakes proble
 
 It isn't finished — authentication, formal model evaluation, and OCR support are real, named next steps rather than hidden gaps — but the core workflow works, the architecture is clean, and the ML + AI combination is a genuinely useful idea for this problem space. That combination of **a working product today** and **an honest, concrete path to production** is what this submission is meant to demonstrate.
 
-![Razorpay Webhook Integration](./screenshots/14_razorpay_webhook_integration.png)
+![Razorpay Webhook Integration](./screenshots/razorpay_webhook_integration.png)
 *The dispute lifecycle, connected end-to-end into the Razorpay ecosystem.*
