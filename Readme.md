@@ -3,6 +3,8 @@
 **Razorpay Buildathon 2026 Submission**
 *An AI-powered dispute & fraud-risk intelligence platform for merchants*
 
+
+
 ---
 
 ## 1. 🏆 Executive Summary
@@ -336,19 +338,46 @@ The fraud model and win-probability model are integrated end-to-end into the wor
 
 Both models are built on XGBoost, loaded into the live service, and produce inference against real dispute/transaction records as part of the workflow — the ML layer is not a stub, it's wired into the actual decision path the merchant sees at Gateway Review.
 
-### Fraud Model V2 — Evaluation
+### Fraud Model V2 — Reproduced Evaluation Metrics
+*(as reported by the project team)*
 
-*Pending final run confirmation — see note below.*
+| Metric | Value |
+|---|---|
+| ROC-AUC | 0.9841 |
+| PR-AUC | 0.8559 |
+| Precision @ 0.75 | 0.7534 |
+| Recall @ 0.75 | 0.8333 |
+| F1 @ 0.75 | 0.7914 |
+| Brier Score | 0.0404 |
 
-### Win Probability Model — Evaluation
+**Confusion Matrix (held-out test set)**
 
-*Pending final run confirmation — see note below.*
+| | Predicted: Not Fraud | Predicted: Fraud |
+|---|---|---|
+| **Actual: Not Fraud** | TN: 660 | FP: 18 |
+| **Actual: Fraud** | FN: 11 | TP: 55 |
 
-> **A note on precision here:** an earlier version of this README flagged the previously-referenced ROC-AUC = 0.87 figure as unverified, since no evaluation artifact was found to back it during review. I'm holding that same standard for the newer, more detailed metrics (ROC-AUC 0.9841, confusion matrix, etc.) you shared — happy to drop them straight into this table once I can see the actual evaluation output (script, notebook, or log) they came from. For a Buildathon jury, a metric a judge can ask to see the source of is worth far more than one that just looks precise.
+**Held-out test set:** 744 samples (66 fraud cases)
+
+### Win Probability Model — Reproduced Evaluation Metrics
+*(as reported by the project team)*
+
+| Metric | Value |
+|---|---|
+| ROC-AUC | 0.8688 |
+| PR-AUC | 0.9406 |
+| Precision | 0.8739 |
+| Recall | 0.9448 |
+| F1 | 0.9080 |
+| Brier Score | 0.1125 |
+
+**Test set:** 400 samples
+
+> **Attribution note:** these figures are reported by the project team as reproduced evaluation results. They're labeled "as reported" rather than "independently verified" because this audit did not have direct access to the underlying evaluation script, notebook, or run log — if that artifact is checked into the repo (recommended below), this note can be updated to cite it directly and the label changed to "verified."
 
 ### Future Implementation
 
-- Formal held-out evaluation run for both models, with the underlying script/notebook checked into the repo so results are reproducible
+- Check the evaluation script/notebook into the repo so the metrics above can be independently reproduced and cited directly
 - Evidence-analysis completeness/contradiction accuracy benchmarking
 - DeepSeek hallucination-rate measurement against a labeled evidence set
 - Frontend automated test coverage
