@@ -3,7 +3,7 @@
 **Razorpay Buildathon 2026 Submission**
 *An AI-powered dispute & fraud-risk intelligence platform for merchants*
 
-
+> **Note on screenshots:** Image paths below use the semantic naming convention (`risk_manager_dashboard.png` etc.) and GitHub-relative paths (`./screenshots/...`). Place the renamed screenshot files in a `screenshots/` folder alongside this README and the embeds will render on GitHub automatically.
 
 ---
 
@@ -20,7 +20,7 @@ Chargeback and dispute management is one of the most operationally painful parts
 
 The core innovation is bringing structured ML risk scoring and unstructured LLM evidence reasoning into a **single decision-support workflow**, so merchants aren't fighting disputes blind.
 
-![Risk Manager Dashboard](./screenshots/risk manager main dashboard.png)
+![Risk Manager Dashboard](./screenshots/risk_manager_dashboard.png)
 *The main dashboard — merchant's entry point into fraud risk and dispute intelligence.*
 
 ---
