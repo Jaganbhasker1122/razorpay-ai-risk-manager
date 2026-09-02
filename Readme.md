@@ -20,7 +20,7 @@ Chargeback and dispute management is one of the most operationally painful parts
 
 The core innovation is bringing structured ML risk scoring and unstructured LLM evidence reasoning into a **single decision-support workflow**, so merchants aren't fighting disputes blind.
 
-![Risk Manager Dashboard](./screenshots/risk_manager_dashboard.png)
+![Risk Manager Dashboard](./screenshots/risk manager main dashboard.png)
 *The main dashboard — merchant's entry point into fraud risk and dispute intelligence.*
 
 ---
