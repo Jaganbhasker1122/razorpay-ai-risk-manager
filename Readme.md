@@ -3,7 +3,13 @@
 **Razorpay Buildathon 2026 Submission**
 *An AI-powered dispute & fraud-risk intelligence platform for merchants*
 
-> **Note on screenshots:** Image paths below use the semantic naming convention (`risk_manager_dashboard.png` etc.) and GitHub-relative paths (`./screenshots/...`). Place the renamed screenshot files in a `screenshots/` folder alongside this README and the embeds will render on GitHub automatically.
+## 🎥 Project Demo
+
+▶️ **[Watch the Project Demo on YouTube](https://www.youtube.com/watch?v=3cHDvWRjT7s)**
+
+## 📊 Project Presentation
+
+📑 **[View / Download Presentation](./docs/presentation.pptx)**
 
 ---
 
